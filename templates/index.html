@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Skincare Recommendation</h1>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <div class="container">
+            <form method="POST" action="/">
+                <table>
+                    <tr>
+                        <td><label for="skin_type">Jenis Kulit:</label></td>
+                        <td>
+                            <select id="skin_type" name="skin_type" required>
+                                <option value="">Pilih Tipe Kulit</option>
+                                <option value="Berminyak">Berminyak</option>
+                                <option value="Kering">Kering</option>
+                                <option value="Kombinasi">Kombinasi</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Sensitif">Sensitif</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="problems">Permasalahan Kulit:</label></td>
+                        <td>
+                            <select id="problems" name="problems" required>
+                                <option value="">Pilih Permasalahan Kulit</option>
+                                <option value="Penuaan Kulit">Penuaan Kulit</option>
+                                <option value="Jerawat">Jerawat</option>
+                                <option value="Kulit Kusam">Kusam</option>
+                                <option value="Hiperpigmentasi">Hiperpigmentasi</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="type_product">Tipe Produk:</label></td>
+                        <td>
+                            <select id="type_product" name="type_product" required>
+                                <option value="">Pilih Tipe Produk</option>
+                                <option value="Sunscreen">Sunscreen</option>
+                                <option value="Sunscreen">Facial Wash</option>
+                                <option value="Moisturizer Cream">Moisturizer Cream</option>
+                                <option value="Moisturizer Gel">Moisturizer Gel</option>
+                                <option value="Cream and Lotion">Cream and Lotion</option>
+                                <option value="Make up removal">Make up removal</option>
+                                <option value="Toner">Toner</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit" style="margin-left: 8%;">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+            <h2>Rekomendasi Produk:</h2>
+            <table class="recommendations">
+                <tr>
+                    <th>Jenis Kulit</th>
+                    <th>Permasalahan Kulit</th>
+                    <th>Tipe Produk</th>
+                    <th>Nama Produk</th>
+                    <th>Brand</th>
+                </tr>
+                {% for product in recommendations %}
+                    <tr>
+                        <td>{{ product['Jenis Kulit'] }}</td>
+                        <td>{{ product['Permasalahan Kulit'] }}</td>
+                        <td>{{ product['Type'] }}</td>
+                        <td>{{ product['Name'] }}</td>
+                        <td>{{ product['Brand'] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Skincare Recommendation</p>
+        </div>
+    </footer>
+</body>
+</html>

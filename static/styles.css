@@ -1,0 +1,137 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Background color light gray */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #9ed9cc; /* Sage green background */
+    color: #ffffff; /* White text */
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation styles */
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0; /* Lighter shade of white on hover */
+}
+
+/* Main content section */
+.main-content {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow effect */
+}
+
+/* Form styles */
+form table {
+    width: 100%;
+}
+
+form table td {
+    padding: 8px;
+}
+
+form table select {
+    width: calc(100% - 16px);
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form table button {
+    width: auto; /* Lebar tombol disesuaikan dengan teks di dalamnya */
+    padding: 8px 16px; /* Padding tombol */
+    font-size: 14px; /* Ukuran font teks di tombol */
+    background-color: #9ed9cc; /* Warna latar belakang tombol */
+    color: #ffffff; /* Warna teks di tombol */
+    border: none; /* Menghapus border tombol */
+    cursor: pointer; /* Menjadikan kursor berubah saat di atas tombol */
+    border-radius: 4px; /* Memberi sudut melengkung pada tombol */
+    transition: background-color 0.3s; /* Transisi untuk perubahan warna latar belakang */
+}
+
+form table button:hover {
+    background-color: #7dbbb0; /* Warna latar belakang tombol lebih gelap saat dihover */
+}
+
+/* Recommendations table styles */
+.recommendations {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.recommendations th, .recommendations td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.recommendations th {
+    background-color: #9ed9cc; /* Sage green header */
+    color: #ffffff;
+}
+
+.recommendations tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+.recommendations tr:hover {
+    background-color: #e0e0e0; /* Lighter gray on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #9ed9cc; /* Sage green footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    form table input[type="text"], form table button {
+        width: 100%;
+    }
+}
